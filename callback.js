@@ -1,3 +1,4 @@
+//1. Basic Callback Execution
 function processNumber(num,callback) {
     callback(num*2)
     
@@ -5,6 +6,7 @@ function processNumber(num,callback) {
 processNumber(10,res=>console.log(res));
 
 
+//2. Callback with Array Iteration
 function forEachElement(array, callback){
     for(i=0;i<array.length;i++){
         callback(array[i]);
@@ -13,6 +15,7 @@ function forEachElement(array, callback){
 forEachElement([1,2,3,4,5],res => console.log(res));
 
 
+//3. Simple Delayed Callback
 function sayHello(name,callback){
     setTimeout(() => {
         let message = "Hello " + name+"!";
@@ -25,6 +28,8 @@ sayHello("Ajay",
         console.log(res)
 })
 
+
+//4. Callback on Condition
 function checkEven(num,callback1,callback2){
     if(num%2 == 0){
         callback1(num)
@@ -41,7 +46,7 @@ checkEven(2,(even => {
     
 }))
 
-
+//5. Sequential Callbacks
 function performTasks(num,callback1,callback2){
     const resultAfterAdd = callback1(num);
     const finalResult = callback2(resultAfterAdd);
