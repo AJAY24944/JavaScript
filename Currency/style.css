@@ -1,0 +1,102 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px;
+    background-image: url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background 0.5s ease-in-out;
+}
+
+    input,
+    select,
+    button,
+    h2 {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    input,
+select {
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 16px;
+    outline: none;
+    font-size: 16px;
+    color: #222;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 8px 24px rgba(31, 38, 135, 0.18);
+}
+
+    input::placeholder {
+        color: #444;
+    }
+
+    select {
+        cursor: pointer;
+    }
+
+    button {
+        padding: 14px 18px;
+        border: none;
+        border-radius: 16px;
+        font-size: 17px;
+        font-weight: 600;
+        cursor: pointer;
+        color: white;
+        background: linear-gradient(135deg, #ff6a88, #ff99ac, #7f7fd5);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    button:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+    }
+
+   h2 {
+    text-align: center;
+    padding: 16px;
+    border-radius: 18px;
+    color: #1f1f1f;
+    font-size: 22px;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 24px rgba(31, 38, 135, 0.18);
+}
+
+    @media (max-width: 768px) {
+        input,
+        select,
+        button,
+        h2 {
+            max-width: 100%;
+        }
+
+        body {
+            padding: 16px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+    }
